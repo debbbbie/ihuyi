@@ -39,3 +39,7 @@ Ihuyi.password = "Your Ihuyi Password(可以明文密码或使用32位MD5加密)
 
 * 第二个是短信内容。
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/debbbbie/ihuyi/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
