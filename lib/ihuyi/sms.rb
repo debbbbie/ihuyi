@@ -3,6 +3,7 @@ require 'nori'
 
 module Ihuyi
   module SMS
+    # return send_status(true/false), send_msg (xxxxxx[send_code])
     def self.deliver(cellphone, content)
       base_uri = "http://106.ihuyi.cn/webservice/sms.php"
       parser = Nori.new(:parser => :rexml)
@@ -13,7 +14,7 @@ module Ihuyi
                                                     :mobile   => cellphone,
                                                     :content  => content
                                                 } }))
-      return res['SubmitResult']['code'], res['SubmitResult']['msg']
+      return res['SubmitResult']['code'] == '2', "#{res['SubmitResult']['msg']}[#{res['SubmitResult']['code']}]"
     end
   end
 end
